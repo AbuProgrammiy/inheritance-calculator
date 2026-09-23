@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Meros — Islomiy meros hisoblagichi</title>
+
+    <meta
+      name="description"
+      content="Islomiy merosni hisoblash uchun onlayn kalkulyator."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="#" class="logo">
+          <div class="logo-icon">م</div>
+
+          <div>
+            <strong>Meros</strong>
+            <span>Islomiy meros kalkulyatori</span>
+          </div>
+        </a>
+
+        <nav class="navigation">
+          <a href="#calculator"> Hisoblash </a>
+
+          <a href="#about"> Meros haqida </a>
+
+          <a href="#sources"> Manbalar </a>
+        </nav>
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          type="button"
+          aria-label="Menyu"
+        >
+          ☰
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#calculator">Hisoblash</a>
+        <a href="#about">Meros haqida</a>
+        <a href="#sources">Manbalar</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-badge">ISLOMIY MEROS</div>
+
+          <h1>
+            Merosni
+            <span>to‘g‘ri hisoblang</span>
+          </h1>
+
+          <p>
+            Marhumdan qolgan mol-mulkni Qur’on va fiqh qoidalariga asoslangan
+            holda merosxo‘rlar o‘rtasida taqsimlashni hisoblang.
+          </p>
+
+          <a href="#calculator" class="hero-button">
+            Hisoblashni boshlash
+            <span>→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- IMPORTANT NOTICE -->
+
+      <section class="container">
+        <div class="important-notice">
+          <div class="notice-icon">!</div>
+
+          <div>
+            <strong>Muhim eslatma</strong>
+
+            <p>
+              Ushbu kalkulyator ma’lumot olish va dastlabki hisob-kitob uchun
+              mo‘ljallangan. Murakkab meros masalalarida malakali ulamo yoki
+              mutaxassis bilan maslahatlashish lozim.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CALCULATOR -->
+
+      <section class="calculator-section" id="calculator">
+        <div class="container">
+          <div class="section-heading">
+            <span> MEROS KALKULYATORI </span>
+
+            <h2>Merosni hisoblash</h2>
+
+            <p>Marhum va merosxo‘rlar haqidagi ma’lumotlarni kiriting.</p>
+          </div>
+
+          <div class="calculator-layout">
+            <!-- FORM -->
+
+            <div class="calculator-card">
+              <!-- STEP 1 -->
+
+              <div class="form-section">
+                <div class="form-section-title">
+                  <span class="step-number"> 01 </span>
+
+                  <div>
+                    <h3>Hisoblash asosi</h3>
+
+                    <p>Mazhab va mol-mulk ma’lumotlari</p>
+                  </div>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="madhab"> Mazhab </label>
+
+                    <select id="madhab">
+                      <option value="hanafi">Hanafiy</option>
+
+                      <option value="maliki">Molikiy</option>
+
+                      <option value="shafii">Shofe’iy</option>
+
+                      <option value="hanbali">Hanbaliy</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="currency"> Valyuta </label>
+
+                    <select id="currency">
+                      <option value="UZS">So‘m (UZS)</option>
+
+                      <option value="USD">Dollar (USD)</option>
+
+                      <option value="EUR">Yevro (EUR)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group full">
+                    <label for="estate"> Umumiy mol-mulk </label>
+
+                    <input
+                      id="estate"
+                      type="number"
+                      min="0"
+                      placeholder="Masalan: 100000000"
+                    />
+
+                    <small> Marhumdan qolgan umumiy mol-mulk qiymati. </small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="funeral"> Dafn xarajatlari </label>
+
+                    <input id="funeral" type="number" min="0" placeholder="0" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="debts"> Qarzdorlik </label>
+
+                    <input id="debts" type="number" min="0" placeholder="0" />
+                  </div>
+
+                  <div class="form-group full">
+                    <label for="wasiyyah"> Vasiyat </label>
+
+                    <input
+                      id="wasiyyah"
+                      type="number"
+                      min="0"
+                      placeholder="0"
+                    />
+
+                    <small> Vasiyat masalasida shar’iy shartlar mavjud. </small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 2 -->
+
+              <div class="form-section">
+                <div class="form-section-title">
+                  <span class="step-number"> 02 </span>
+
+                  <div>
+                    <h3>Marhum haqida</h3>
+
+                    <p>Marhumning jinsini tanlang</p>
+                  </div>
+                </div>
+
+                <div class="gender-options">
+                  <label class="gender-option">
+                    <input type="radio" name="gender" value="male" checked />
+
+                    <span>
+                      <b>Erkak</b>
+                      <small>Marhum erkak</small>
+                    </span>
+                  </label>
+
+                  <label class="gender-option">
+                    <input type="radio" name="gender" value="female" />
+
+                    <span>
+                      <b>Ayol</b>
+                      <small>Marhuma ayol</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 3 -->
+
+              <div class="form-section">
+                <div class="form-section-title">
+                  <span class="step-number"> 03 </span>
+
+                  <div>
+                    <h3>Merosxo‘rlar</h3>
+
+                    <p>
+                      Marhum hayotdan ko‘z yumgan paytda tirik bo‘lgan
+                      merosxo‘rlarni kiriting.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="relatives">
+                  <!-- SPOUSE -->
+
+                  <div class="relative">
+                    <div>
+                      <strong id="spouseLabel"> Xotin </strong>
+
+                      <span> Marhumning turmush o‘rtog‘i </span>
+                    </div>
+
+                    <input
+                      id="spouse"
+                      type="number"
+                      min="0"
+                      max="4"
+                      value="0"
+                    />
+                  </div>
+
+                  <!-- SONS -->
+
+                  <div class="relative">
+                    <div>
+                      <strong> O‘g‘illar </strong>
+
+                      <span> Tirik o‘g‘illar soni </span>
+                    </div>
+
+                    <input id="sons" type="number" min="0" value="0" />
+                  </div>
+
+                  <!-- DAUGHTERS -->
+
+                  <div class="relative">
+                    <div>
+                      <strong> Qizlar </strong>
+
+                      <span> Tirik qizlar soni </span>
+                    </div>
+
+                    <input id="daughters" type="number" min="0" value="0" />
+                  </div>
+
+                  <!-- FATHER -->
+
+                  <div class="relative">
+                    <div>
+                      <strong> Ota </strong>
+
+                      <span> Otasi hayotmi? </span>
+                    </div>
+
+                    <label class="switch">
+                      <input id="father" type="checkbox" />
+
+                      <span></span>
+                    </label>
+                  </div>
+
+                  <!-- MOTHER -->
+
+                  <div class="relative">
+                    <div>
+                      <strong> Ona </strong>
+
+                      <span> Onasi hayotmi? </span>
+                    </div>
+
+                    <label class="switch">
+                      <input id="mother" type="checkbox" />
+
+                      <span></span>
+                    </label>
+                  </div>
+
+                  <!-- GRANDFATHER -->
+
+                  <div class="relative">
+                    <div>
+                      <strong> Bobosi </strong>
+
+                      <span> Otaning otasi </span>
+                    </div>
+
+                    <label class="switch">
+                      <input id="grandfather" type="checkbox" />
+
+                      <span></span>
+                    </label>
+                  </div>
+
+                  <!-- GRANDMOTHER -->
+
+                  <div class="relative">
+                    <div>
+                      <strong> Buvisi </strong>
+
+                      <span> Haqiqiy buvi </span>
+                    </div>
+
+                    <input
+                      id="grandmother"
+                      type="number"
+                      min="0"
+                      max="2"
+                      value="0"
+                    />
+                  </div>
+
+                  <!-- FULL BROTHERS -->
+
+                  <div class="relative">
+                    <div>
+                      <strong> Tug‘ishgan aka-ukalar </strong>
+
+                      <span> Bir ota va bir onadan </span>
+                    </div>
+
+                    <input id="fullBrothers" type="number" min="0" value="0" />
+                  </div>
+
+                  <!-- FULL SISTERS -->
+
+                  <div class="relative">
+                    <div>
+                      <strong> Tug‘ishgan opa-singillar </strong>
+
+                      <span> Bir ota va bir onadan </span>
+                    </div>
+
+                    <input id="fullSisters" type="number" min="0" value="0" />
+                  </div>
+
+                  <!-- MATERNAL SIBLINGS -->
+
+                  <div class="relative">
+                    <div>
+                      <strong> Ona bir aka-uka </strong>
+
+                      <span> Bir onadan </span>
+                    </div>
+
+                    <input
+                      id="maternalSiblings"
+                      type="number"
+                      min="0"
+                      value="0"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- ADVANCED -->
+
+              <div class="advanced-box">
+                <div class="advanced-icon">i</div>
+
+                <div>
+                  <strong> Murakkab holatlar </strong>
+
+                  <p>
+                    Nabiralar, amakilar, jiyanlar, bobolar va aka-ukalar bilan
+                    bog‘liq ayrim holatlarda mazhablar o‘rtasida farqlar mavjud
+                    bo‘lishi mumkin.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button id="calculate" class="calculate-button" type="button">
+                  Hisoblash
+                  <span>→</span>
+                </button>
+
+                <button id="example" class="example-button" type="button">
+                  Misolni yuklash
+                </button>
+              </div>
+            </div>
+
+            <!-- RESULT -->
+
+            <aside class="result-card" id="results">
+              <div class="empty-result">
+                <div class="result-symbol">م</div>
+
+                <h3>Natija shu yerda ko‘rsatiladi</h3>
+
+                <p>Ma’lumotlarni kiriting va «Hisoblash» tugmasini bosing.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="section-heading left">
+            <span> MEROS HAQIDA </span>
+
+            <h2>Faraid nima?</h2>
+          </div>
+
+          <div class="about-grid">
+            <article class="info-card">
+              <div class="info-number">01</div>
+
+              <h3>Qur’on asoslari</h3>
+
+              <p>
+                Islomiy merosning asosiy hukmlari Niso surasining 11, 12 va
+                176-oyatlarida bayon qilingan.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <div class="info-number">02</div>
+
+              <h3>Merosxo‘rlar</h3>
+
+              <p>
+                Meros miqdori marhumning tirik qarindoshlari va ularning o‘zaro
+                qarindoshlik darajasiga bog‘liq.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <div class="info-number">03</div>
+
+              <h3>Mazhab</h3>
+
+              <p>
+                Ayrim murakkab masalalarda Hanafiy, Molikiy, Shofe’iy va
+                Hanbaliy mazhablari orasida fiqhiy tafovutlar mavjud.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOURCES -->
+
+      <section class="sources-section" id="sources">
+        <div class="container sources">
+          <div>
+            <span> MANBALAR </span>
+
+            <h2>Asosiy Qur’on oyatlari</h2>
+          </div>
+
+          <div class="source-list">
+            <div>
+              <strong>Niso 4:11</strong>
+              <span> Farzandlar va ota-onalar </span>
+            </div>
+
+            <div>
+              <strong>Niso 4:12</strong>
+              <span> Er-xotin va ona bir aka-ukalar </span>
+            </div>
+
+            <div>
+              <strong>Niso 4:176</strong>
+              <span> Aka-uka va opa-singillar </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Meros</strong>
+          <p>Islomiy merosni hisoblash vositasi.</p>
+        </div>
+
+        <div>
+          <p>Ta’limiy maqsadda foydalanish uchun.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
